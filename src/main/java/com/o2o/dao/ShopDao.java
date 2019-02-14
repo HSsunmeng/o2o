@@ -4,7 +4,12 @@ package com.o2o.dao;
 import com.o2o.entity.Shop;
 import org.apache.ibatis.annotations.Param;
 
+
 public interface ShopDao {
+    /**
+     * 查询店铺信息
+     * */
+    Shop queryShop(@Param("shopId") Long shopId);
     /**
      * 插入店铺信息
      * */

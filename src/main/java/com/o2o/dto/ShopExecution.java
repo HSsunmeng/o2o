@@ -3,6 +3,7 @@ package com.o2o.dto;
 import com.o2o.entity.Shop;
 import com.o2o.enums.ShopStateEunm;
 
+import java.io.InputStream;
 import java.util.List;
 
 public class ShopExecution {
@@ -17,7 +18,7 @@ public class ShopExecution {
     //Shop列表（查看店铺的时候用）
     private List<Shop>shopList;
 
-    public ShopExecution() {
+    public ShopExecution(Shop shop, InputStream inputStream, String name) {
     }
     /**
      * 店铺操作失败的时候使用的构造器

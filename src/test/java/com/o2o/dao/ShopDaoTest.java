@@ -6,6 +6,7 @@ import com.o2o.entity.PersionInfo;
 import com.o2o.entity.Shop;
 import com.o2o.entity.ShopCategory;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,6 +20,14 @@ public class ShopDaoTest extends BaseTest {
     @Autowired
     private ShopDao shopDao;
     @Test
+    public void setShopDao(){
+        Long shopId=1l;
+        Shop shop = shopDao.queryShop(shopId);
+        System.out.println(shop.getArea().getAreaId());
+        System.out.println(shop.getArea().getAreaName());
+    }
+    @Test
+    @Ignore
     public void shupTest(){
         Shop shop=new Shop();
         Area area=new Area();
@@ -46,6 +55,7 @@ public class ShopDaoTest extends BaseTest {
     }
 
     @Test
+    @Ignore
     public void shupUpdateTest(){
         Shop shop=new Shop();
         shop.setShopId(1l);

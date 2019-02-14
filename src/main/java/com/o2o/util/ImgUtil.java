@@ -10,6 +10,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -22,16 +23,16 @@ public class ImgUtil {
     /**
      * 处理缩略图，并返回新生成图片的相对路径
      * */
-    public static String generateThumbnails(File multipartFile,String targetAddr){
+    public static String generateThumbnails(InputStream multipartFileShopImgInputStream,String fileName, String targetAddr){
         String realName=getRandomName();
-        String extension=getExtension(multipartFile);
+        String extension=getExtension(fileName);
         makeDirPath(targetAddr);
         String realtiveAddr=targetAddr+realName+extension;
         logger.debug("current realtiveAddr is"+realtiveAddr);
         File dest=new File(PathUtil.getImgBasePath()+realtiveAddr);
         logger.debug("current complete add is"+PathUtil.getImgBasePath()+realtiveAddr);
         try{
-            Thumbnails.of(multipartFile).size(200,200)
+            Thumbnails.of(multipartFileShopImgInputStream).size(200,200)
                     .watermark(Positions.BOTTOM_CENTER,ImageIO
                             .read(new File(basePath)),0.5f)
                     . outputQuality(0.8f).toFile(dest);
@@ -68,9 +69,9 @@ public class ImgUtil {
     /**
      * @return 获取当前文件的扩展名如（jpg等）
      * */
-    private static String getExtension(File multipartFile) {
-        String originalFileName=multipartFile.getName();
-        return originalFileName.substring(originalFileName.lastIndexOf("."));
+    private static String getExtension(String fileName) {
+
+        return fileName.substring(fileName.lastIndexOf("."));
     }
 
     /**
@@ -86,5 +87,20 @@ public class ImgUtil {
 
         Thumbnails.of(new File("F:/image/xiaozhu.jpg")).size(200,200).watermark(Positions.BOTTOM_CENTER,
                 ImageIO.read (new File(basePath+"/gouwuzhu.jpg")),0.5f). outputQuality(0.8f).toFile("F:/image/xiaozhuNew.jpg");
+    }
+    /**
+     * 删除图片文件
+     * */
+    public static void deleteFileOrPath(String storePath){
+        File fileOrPath=new File(PathUtil.getImgBasePath()+storePath);
+        if (fileOrPath.exists()){
+            if (fileOrPath.isDirectory()){
+                File files[]=fileOrPath.listFiles();
+                for (int i=0;i<files.length;i++){
+                    files[i].delete();
+                }
+            }
+            fileOrPath.delete();
+        }
     }
 }
