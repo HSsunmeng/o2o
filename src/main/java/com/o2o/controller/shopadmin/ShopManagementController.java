@@ -39,6 +39,54 @@ public class ShopManagementController {
     private AreaService areaService;
     @Autowired
     private ShopService shopService;
+
+    @RequestMapping(value = "/getshopmanagementinfo",method = RequestMethod.GET)
+    @ResponseBody
+    private Map<String,Object>getShopManagementInfo(HttpServletRequest request){
+        Map<String,Object>modleMap=new HashMap<>();
+        Long shopId=HttpServletRequstUtil.getLong(request,"shopId");
+            if (shopId<=0){
+                Object carrentShopObj=request.getSession().getAttribute("carrentShopObj");
+                    if (carrentShopObj==null){
+                        modleMap.put("redirect",true);
+                        modleMap.put("url","/o2o/shop/shoplist");
+                    }else{
+                        Shop carrentShop= (Shop) carrentShopObj;
+                        modleMap.put("redirect",false);
+                        modleMap.put("shopId",carrentShop.getShopId());
+                    }
+            }else {
+                Shop carrentShop=new Shop();
+                    carrentShop.setShopId(shopId);
+                    request.getSession().setAttribute("carrentShop",carrentShop);
+                    modleMap.put("redirect",false);
+            }
+            return modleMap;
+    }
+
+    @RequestMapping(value = "/getshoplist",method = RequestMethod.GET)
+    @ResponseBody
+    private Map<String,Object>getShopList(HttpServletRequest request){
+        Map<String,Object>modleMap=new HashMap<>();
+        PersionInfo user=new PersionInfo();
+        user.setUserId(1l);
+        user.setName("test");
+        request.getSession().setAttribute("user",user);
+        user= (PersionInfo) request.getSession().getAttribute("user");
+
+        try{
+            Shop shopCondition=new Shop();
+            shopCondition.setOwner(user);
+            ShopExecution shopExecution = shopService.getShopList(shopCondition, 0, 100);
+            modleMap.put("shopList",shopExecution.getShopList());
+            modleMap.put("user",user);
+            modleMap.put("success",true);
+        }catch (Exception e){
+            modleMap.put("success",false);
+            modleMap.put("errMsg",e.getMessage());
+        }
+        return modleMap;
+    }
     @RequestMapping(value = "/getshopbyid",method = RequestMethod.GET)
     @ResponseBody
     private Map<String ,Object>getShopById(HttpServletRequest request){

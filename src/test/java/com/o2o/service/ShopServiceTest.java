@@ -23,6 +23,17 @@ public class ShopServiceTest extends BaseTest {
     @Autowired
     private ShopService shopService;
     @Test
+    public void shopShopServiceCount(){
+        Shop shopCondition=new Shop();
+        ShopCategory shopCategory=new ShopCategory();
+        shopCategory.setShopCategoryId(3l);
+        shopCondition.setShopCategory(shopCategory);
+        ShopExecution shopList = shopService.getShopList(shopCondition, 2, 2);
+        System.out.println("店铺列表数="+shopList.getShopList().size());
+        System.out.println("店铺总数="+shopList.getCount());
+    }
+    @Test
+    @Ignore
     public void getShopService() throws FileNotFoundException {
         Shop shop=new Shop();
         shop.setShopId(1l);

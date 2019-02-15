@@ -17,7 +17,9 @@ public class ShopExecution {
     private Shop shop;
     //Shop列表（查看店铺的时候用）
     private List<Shop>shopList;
+public ShopExecution(){
 
+}
     public ShopExecution(Shop shop, InputStream inputStream, String name) {
     }
     /**

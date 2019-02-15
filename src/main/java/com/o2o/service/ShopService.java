@@ -9,6 +9,10 @@ import java.io.InputStream;
 
 public interface ShopService {
     /**
+     * 根据shopCondition分页返回相应的店铺数量
+     * */
+    ShopExecution getShopList(Shop shopCondition,int pageIndex,int pageSize);
+    /**
      * 注册店铺信息。。包括图片处理
      *
      * */

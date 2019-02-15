@@ -7,6 +7,7 @@ import com.o2o.enums.ShopStateEunm;
 import com.o2o.exceptions.ShopOperationException;
 import com.o2o.service.ShopService;
 import com.o2o.util.ImgUtil;
+import com.o2o.util.PageCalculatro;
 import com.o2o.util.PathUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,11 +16,27 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.File;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class ShopServiceImpl implements ShopService {
 @Autowired
 private ShopDao shopDao;
+
+    @Override
+    public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
+        int rowIndex= PageCalculatro.calculateRowIndex(pageIndex,pageSize);
+        List<Shop> shopList = shopDao.queryShaoList(shopCondition, rowIndex, pageSize);
+        int count = shopDao.queryShopCount(shopCondition);
+        ShopExecution shopExecution=new ShopExecution();
+        if (shopList!=null){
+            shopExecution.setShopList(shopList);
+            shopExecution.setCount(count);
+        }else {
+            shopExecution.setState(ShopStateEunm.INNER_ERROR.getState());
+        }
+        return shopExecution;
+    }
 
     @Transactional
     public ShopExecution addShop(Shop shop, InputStream shopImgInputStream ,String fileName) {
