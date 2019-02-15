@@ -77,6 +77,9 @@ public class ShopManagementController {
             }
             return modleMap;
     }
+    /**
+     * 注册店铺信息
+     * */
     @RequestMapping(value = "/regitershop",method = RequestMethod.POST)
     @ResponseBody
     private Map<String,Object>registersShop(HttpServletRequest request)  {
@@ -165,7 +168,9 @@ public class ShopManagementController {
             modleMap.put("errMsg", "验证码错误");
             return modleMap;
         }
-        //接收并转化相应的参数，包括店铺信息以及图片信息
+        /**
+         * 接收并转化相应的参数，包括店铺信息以及图片信息
+         * */
         String shopStr = HttpServletRequstUtil.getString(request, "shopStr");
         ObjectMapper objectMapper = new ObjectMapper();
         Shop shop = null;
