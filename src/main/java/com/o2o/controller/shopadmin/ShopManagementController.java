@@ -46,10 +46,10 @@ public class ShopManagementController {
         Map<String,Object>modleMap=new HashMap<>();
         Long shopId=HttpServletRequstUtil.getLong(request,"shopId");
             if (shopId<=0){
-                Object carrentShopObj=request.getSession().getAttribute("carrentShopObj");
+                Object carrentShopObj=request.getSession().getAttribute("currentShop");
                     if (carrentShopObj==null){
                         modleMap.put("redirect",true);
-                        modleMap.put("url","/o2o/shop/shoplist");
+                        modleMap.put("url","/o2o/shopadmin/shoplist");
                     }else{
                         Shop carrentShop= (Shop) carrentShopObj;
                         modleMap.put("redirect",false);
@@ -58,8 +58,9 @@ public class ShopManagementController {
             }else {
                 Shop carrentShop=new Shop();
                     carrentShop.setShopId(shopId);
-                    request.getSession().setAttribute("carrentShop",carrentShop);
+                    request.getSession().setAttribute("currentShop",carrentShop);
                     modleMap.put("redirect",false);
+
             }
             return modleMap;
     }
