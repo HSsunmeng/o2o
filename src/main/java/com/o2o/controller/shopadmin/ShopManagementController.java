@@ -1,6 +1,7 @@
 package com.o2o.controller.shopadmin;
 
 import  com.fasterxml.jackson.databind.ObjectMapper;
+import com.o2o.dto.ImageHolder;
 import com.o2o.dto.ShopExecution;
 import com.o2o.entity.Area;
 import com.o2o.entity.PersionInfo;
@@ -171,7 +172,8 @@ public class ShopManagementController {
             shop.setOwner(owner);
             ShopExecution  shopExecution;
             try {
-                 shopExecution = shopService.addShop(shop,shopImg.getInputStream(),shopImg.getOriginalFilename());
+                ImageHolder thumbnail=new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+                 shopExecution = shopService.addShop(shop,thumbnail);
                 if (shopExecution.getState()== ShopStateEunm.CHECK.getState()){
                     modleMap.put("success",true);
                     //该用户可以操作的店铺列表
@@ -245,10 +247,12 @@ public class ShopManagementController {
 
             ShopExecution shopExecution;
             try {
+
                 if (shopImg == null){
-                    shopExecution = shopService.modifyShop(shop, null, null);
+                    shopExecution = shopService.modifyShop(shop,null);
                 }else {
-                    shopExecution = shopService.modifyShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                    ImageHolder thumbnail=new ImageHolder( shopImg.getOriginalFilename(),shopImg.getInputStream());
+                    shopExecution = shopService.modifyShop(shop,thumbnail );
                 }
 
                 if (shopExecution.getState() == ShopStateEunm.SUCCESS.getState()) {

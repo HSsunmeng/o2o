@@ -8,7 +8,7 @@ import java.util.List;
  * */
 public class Product {
     //商品id
-    private Long product;
+    private Long productId;
     //商品名称
     private String productName;
     //商品描述
@@ -35,12 +35,12 @@ public class Product {
     //对应 的店铺
     private Shop shop;
 
-    public Long getProduct() {
-        return product;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct(Long product) {
-        this.product = product;
+    public void setProduct(Long productId) {
+        this.productId = productId;
     }
 
     public String getProductName() {

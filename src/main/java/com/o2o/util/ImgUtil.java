@@ -1,5 +1,6 @@
 package com.o2o.util;
 
+import com.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnailator;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
@@ -23,16 +24,22 @@ public class ImgUtil {
     /**
      * 处理缩略图，并返回新生成图片的相对路径
      * */
-    public static String generateThumbnails(InputStream multipartFileShopImgInputStream,String fileName, String targetAddr){
+    public static String generateThumbnails(ImageHolder thumbnail, String targetAddr){
+        //获取不重复的随机名
         String realName=getRandomName();
-        String extension=getExtension(fileName);
+        //获取文件的扩展名（JPG等）
+        String extension=getExtension(thumbnail.getImageName());
+        //如果目标文件不存在就自动创建
         makeDirPath(targetAddr);
+        //获取文件储存的相对路径
         String realtiveAddr=targetAddr+realName+extension;
         logger.debug("current realtiveAddr is"+realtiveAddr);
+        //获取文件要保存的目标路径
         File dest=new File(PathUtil.getImgBasePath()+realtiveAddr);
         logger.debug("current complete add is"+PathUtil.getImgBasePath()+realtiveAddr);
+        //调用Thumbnails生成图片水印
         try{
-            Thumbnails.of(multipartFileShopImgInputStream).size(200,200)
+            Thumbnails.of(thumbnail.getImage()).size(200,200)
                     .watermark(Positions.BOTTOM_CENTER,ImageIO
                             .read(new File(basePath)),0.5f)
                     . outputQuality(0.8f).toFile(dest);

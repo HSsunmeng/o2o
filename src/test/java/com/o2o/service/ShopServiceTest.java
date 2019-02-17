@@ -1,6 +1,7 @@
 package com.o2o.service;
 
 import com.o2o.BaseTest;
+import com.o2o.dto.ImageHolder;
 import com.o2o.dto.ShopExecution;
 import com.o2o.entity.Area;
 import com.o2o.entity.PersionInfo;
@@ -40,7 +41,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setShopName("修改后的名称");
         File file =new File("F:\\image\\baobao.jpg");
         InputStream inputStream=new FileInputStream(file);
-        ShopExecution shopExecution = shopService.modifyShop(shop, inputStream, "baobao.jpg");
+        ImageHolder imageHolder=new ImageHolder("baobao.jpg",inputStream);
+        ShopExecution shopExecution = shopService.modifyShop(shop,imageHolder );
         System.out.println("图片地址为："+shopExecution.getShop().getShopImg());
     }
     @Test
@@ -68,7 +70,8 @@ public class ShopServiceTest extends BaseTest {
 
         File file=new File("F:\\image\\xiaozhu.jpg");
         InputStream inputStream=new FileInputStream(file);
-        ShopExecution shopExecution = shopService.addShop(shop,inputStream,file.getName());
+        ImageHolder imageHolder=new ImageHolder(file.getName(),inputStream);
+        ShopExecution shopExecution = shopService.addShop(shop,imageHolder);
         assertEquals(ShopStateEunm.CHECK.getState(),shopExecution.getState());
     }
 }
