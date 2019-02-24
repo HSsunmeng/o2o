@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: com.o2o.dao.AreaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.124 s <<< FAILURE! - in com.o2o.dao.AreaTest
+testQueryArea(com.o2o.dao.AreaTest)  Time elapsed: 0.242 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+### The error may exist in file [G:\org\o2o\target\classes\mapper\Area.xml]
+### The error may involve com.o2o.dao.AreaDao.qureyArea
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+	at com.o2o.dao.AreaTest.testQueryArea(AreaTest.java:17)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+### The error may exist in file [G:\org\o2o\target\classes\mapper\Area.xml]
+### The error may involve com.o2o.dao.AreaDao.qureyArea
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+	at com.o2o.dao.AreaTest.testQueryArea(AreaTest.java:17)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+	at com.o2o.dao.AreaTest.testQueryArea(AreaTest.java:17)
+Caused by: java.sql.SQLException: null,  message from server: "Host '123.180.207.43' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'"
+	at com.o2o.dao.AreaTest.testQueryArea(AreaTest.java:17)
+

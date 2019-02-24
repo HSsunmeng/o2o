@@ -108,14 +108,18 @@
       <if test="shopCondition.shopCategory != null and shopCondition.shopCategory.shopCategoryId != null">
           AND s.shop_category_id=#{shopCondition.shopCategory.shopCategoryId}
       </if>
+      <if test="shopCondition.shopCategory !=null and shopCondition.shopCategory.parent !=null and shopCondition.shopCategory.parent.shopCategoryId !=null">
+        AND s.shop_category_id IN(SELECT shop_category_id FROM tb_shop_category
+        WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
+      </if>
         <if test="shopCondition.area != null and shopCondition.area.areaId !=null">
             AND s.area_id=#{shopCondition.area.areaId}
         </if>
         <if test="shopCondition.shopName != null">
-            AND s.shop_name LIKE '%#{shopCondition.shopName}%'
+            AND s.shop_name LIKE '%${shopCondition.shopName}%'
         </if>
         <if test="shopCondition.enableStatus != null">
-            AND s.enable_status=#{enableStatus}
+            AND s.enable_status=#{shopCondition.enableStatus}
         </if>
         <if test="shopCondition.owner !=null and shopCondition.owner.userId != null">
             AND s.owner_id=#{shopCondition.owner.userId}
@@ -139,14 +143,18 @@
             <if test="shopCondition.shopCategory != null and shopCondition.shopCategory.shopCategoryId != null">
                 AND s.shop_category_id=#{shopCondition.shopCategory.shopCategoryId}
             </if>
+            <if test="shopCondition.shopCategory !=null and shopCondition.shopCategory.parent !=null and shopCondition.shopCategory.parent.shopCategoryId !=null">
+                AND s.shop_category_id IN(SELECT shop_category_id FROM tb_shop_category
+                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
+            </if>
             <if test="shopCondition.area != null and shopCondition.area.areaId !=null">
                 AND s.area_id=#{shopCondition.area.areaId}
             </if>
             <if test="shopCondition.shopName != null">
-                AND s.shop_name LIKE '%#{shopCondition.shopName}%'
+                AND s.shop_name LIKE '%${shopCondition.shopName}%'
             </if>
             <if test="shopCondition.enableStatus != null">
-                AND s.enable_status=#{enableStatus}
+                AND s.enable_status=#{shopCondition.enableStatus}
             </if>
             <if test="shopCondition.owner !=null and shopCondition.owner.userId != null">
                 AND s.owner_id=#{shopCondition.owner.userId}

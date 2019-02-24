@@ -39,7 +39,7 @@ public class Product {
         return productId;
     }
 
-    public void setProduct(Long productId) {
+    public void setProductId(Long productId) {
         this.productId = productId;
     }
 

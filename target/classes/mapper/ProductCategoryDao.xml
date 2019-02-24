@@ -20,18 +20,15 @@
         create_time
         FROM
         tb_product_category
-        <where>
-            <if test="shopId != null">
-                and shop_id=#{shopId}
-            </if>
-        </where>
+       WHERE
+       shop_id=#{shopId}
         ORDER BY
         priority DESC
     </select>
     <insert id="batchInsertProductCategory" parameterType="java.util.List">
     INSERT INTO
     tb_product_category(product_category_name,priority,create_time,shop_id)
-    VALUE
+    VALUES
     <foreach collection="productCategoryList" item="productCategory" index="index" separator=",">
         (
         #{productCategory.productCategoryName},

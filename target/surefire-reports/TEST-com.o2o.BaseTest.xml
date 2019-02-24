@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.o2o.BaseTest" time="0.2" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="G:\org\o2o\target\test-classes;G:\org\o2o\target\classes;F:\maven\local\junit\junit\4.12\junit-4.12.jar;F:\maven\local\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven\local\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\maven\local\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\maven\local\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven\local\org\springframework\spring-core\5.1.3.RELEASE\spring-core-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-jcl\5.1.3.RELEASE\spring-jcl-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-beans\5.1.3.RELEASE\spring-beans-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-context\5.1.3.RELEASE\spring-context-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-aop\5.1.3.RELEASE\spring-aop-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-expression\5.1.3.RELEASE\spring-expression-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-jdbc\5.1.3.RELEASE\spring-jdbc-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-web\5.1.3.RELEASE\spring-web-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-webmvc\5.1.3.RELEASE\spring-webmvc-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-tx\5.1.3.RELEASE\spring-tx-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-test\5.1.3.RELEASE\spring-test-5.1.3.RELEASE.jar;F:\maven\local\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-databind\2.9.5\jackson-databind-2.9.5.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar;F:\maven\local\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;F:\maven\local\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;F:\maven\local\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;F:\maven\local\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar;F:\maven\local\com\alibaba\druid\1.1.10\druid-1.1.10.jar;F:\maven\local\net\coobird\thumbnailator\0.4.7\thumbnailator-0.4.7.jar;F:\maven\local\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;F:\maven\local\com\github\penggle\kaptcha\2.3.2\kaptcha-2.3.2.jar;F:\maven\local\com\jhlabs\filters\2.0.235-1\filters-2.0.235-1.jar;F:\maven\local\commons-fileupload\commons-fileupload\1.3.2\commons-fileupload-1.3.2.jar;F:\maven\local\commons-io\commons-io\2.2\commons-io-2.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="F:\jdk8\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\ADMINI~1\AppData\Local\Temp\surefire384788204429788770\surefirebooter9019307358353778417.jar C:\Users\Administrator\AppData\Local\Temp\surefire384788204429788770 2019-02-23T15-39-13_885-jvmRun1 surefire7498343135703063434tmp surefire_05540896702951051366tmp"/>
+    <property name="surefire.test.class.path" value="G:\org\o2o\target\test-classes;G:\org\o2o\target\classes;F:\maven\local\junit\junit\4.12\junit-4.12.jar;F:\maven\local\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven\local\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\maven\local\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\maven\local\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven\local\org\springframework\spring-core\5.1.3.RELEASE\spring-core-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-jcl\5.1.3.RELEASE\spring-jcl-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-beans\5.1.3.RELEASE\spring-beans-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-context\5.1.3.RELEASE\spring-context-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-aop\5.1.3.RELEASE\spring-aop-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-expression\5.1.3.RELEASE\spring-expression-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-jdbc\5.1.3.RELEASE\spring-jdbc-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-web\5.1.3.RELEASE\spring-web-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-webmvc\5.1.3.RELEASE\spring-webmvc-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-tx\5.1.3.RELEASE\spring-tx-5.1.3.RELEASE.jar;F:\maven\local\org\springframework\spring-test\5.1.3.RELEASE\spring-test-5.1.3.RELEASE.jar;F:\maven\local\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-databind\2.9.5\jackson-databind-2.9.5.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\maven\local\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar;F:\maven\local\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;F:\maven\local\org\mybatis\mybatis\3.4.6\mybatis-3.4.6.jar;F:\maven\local\org\mybatis\mybatis-spring\1.3.2\mybatis-spring-1.3.2.jar;F:\maven\local\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar;F:\maven\local\com\alibaba\druid\1.1.10\druid-1.1.10.jar;F:\maven\local\net\coobird\thumbnailator\0.4.7\thumbnailator-0.4.7.jar;F:\maven\local\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;F:\maven\local\com\github\penggle\kaptcha\2.3.2\kaptcha-2.3.2.jar;F:\maven\local\com\jhlabs\filters\2.0.235-1\filters-2.0.235-1.jar;F:\maven\local\commons-fileupload\commons-fileupload\1.3.2\commons-fileupload-1.3.2.jar;F:\maven\local\commons-io\commons-io\2.2\commons-io-2.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="F:\jdk8\jre"/>
+    <property name="basedir" value="G:\org\o2o"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ADMINI~1\AppData\Local\Temp\surefire384788204429788770\surefirebooter9019307358353778417.jar"/>
+    <property name="sun.boot.class.path" value="F:\jdk8\jre\lib\resources.jar;F:\jdk8\jre\lib\rt.jar;F:\jdk8\jre\lib\sunrsasign.jar;F:\jdk8\jre\lib\jsse.jar;F:\jdk8\jre\lib\jce.jar;F:\jdk8\jre\lib\charsets.jar;F:\jdk8\jre\lib\jfr.jar;F:\jdk8\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_191-b12"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.1"/>
+    <property name="java.endorsed.dirs" value="F:\jdk8\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="F:\maven\local"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2018.3.3"/>
+    <property name="java.version" value="1.8.0_191"/>
+    <property name="user.dir" value="G:\org\o2o"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.library.path" value="F:\jdk8\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;F:\mysql\mysql-5.7.24-winx64\bin;F:\jdk8\bin;F:\maven\bin;F:\tomcat\apache-tomcat-8.5.37\bin;F:\Git\bin;;F:\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.191-b12"/>
+    <property name="java.ext.dirs" value="F:\jdk8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="F:\maven\local"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="initializationError" classname="com.o2o.BaseTest" time="0">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+</error>
+    <system-out><![CDATA[15:39:14,360 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+15:39:14,360 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+15:39:14,360 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/G:/org/o2o/target/classes/logback.xml]
+15:39:14,410 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+15:39:14,410 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Will scan for changes in [file:/G:/org/o2o/target/classes/logback.xml] 
+15:39:14,410 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - Setting ReconfigureOnChangeTask scanning period to 1 minutes
+15:39:14,420 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+15:39:14,420 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [consoleAppender]
+15:39:14,420 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:39:14,440 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+15:39:14,440 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [debugAppender]
+15:39:14,450 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1864350231 - Will use gz compression
+15:39:14,450 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1864350231 - Will use the pattern catalina.base_IS_UNDEFINED/logs/webapps/debug/debug.%d{yyyy-MM-dd}.log for the active file
+15:39:14,450 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'catalina.base_IS_UNDEFINED/logs/webapps/debug/debug.%d{yyyy-MM-dd}.log.gz'.
+15:39:14,450 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+15:39:14,450 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sat Feb 23 15:39:14 CST 2019
+15:39:14,450 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[debugAppender] - Active log file name: catalina.base_IS_UNDEFINED/logs/webapps/debug.log
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[debugAppender] - File property is set to [catalina.base_IS_UNDEFINED/logs/webapps/debug.log]
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [infoAppender]
+15:39:14,460 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@25548982 - Will use gz compression
+15:39:14,460 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@25548982 - Will use the pattern catalina.base_IS_UNDEFINED/logs/webapps/info/info.%d{yyyy-MM-dd}.log for the active file
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'catalina.base_IS_UNDEFINED/logs/webapps/info/info.%d{yyyy-MM-dd}.log.gz'.
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sat Feb 23 15:39:14 CST 2019
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[infoAppender] - Active log file name: catalina.base_IS_UNDEFINED/logs/webapps/info.log
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[infoAppender] - File property is set to [catalina.base_IS_UNDEFINED/logs/webapps/info.log]
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [errorAppender]
+15:39:14,460 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1735934726 - Will use gz compression
+15:39:14,460 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1735934726 - Will use the pattern catalina.base_IS_UNDEFINED/logs/webapps/error/error.%d{yyyy-MM-dd}.log for the active file
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern 'catalina.base_IS_UNDEFINED/logs/webapps/error/error.%d{yyyy-MM-dd}.log.gz'.
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+15:39:14,460 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Sat Feb 23 15:39:14 CST 2019
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[errorAppender] - Active log file name: catalina.base_IS_UNDEFINED/logs/webapps/error.log
+15:39:14,460 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[errorAppender] - File property is set to [catalina.base_IS_UNDEFINED/logs/webapps/error.log]
+15:39:14,460 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.o2o] to DEBUG
+15:39:14,460 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.o2o] to true
+15:39:14,460 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@67:45 - no applicable action for [appernder-ref], current ElementPath  is [[configuration][logger][appernder-ref]]
+15:39:14,460 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@68:44 - no applicable action for [appernder-ref], current ElementPath  is [[configuration][logger][appernder-ref]]
+15:39:14,460 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@69:45 - no applicable action for [appernder-ref], current ElementPath  is [[configuration][logger][appernder-ref]]
+15:39:14,460 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+15:39:14,460 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [consoleAppender] to Logger[ROOT]
+15:39:14,460 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+15:39:14,470 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@335eadca - Registering current configuration as safe fallback point
+
+]]></system-out>
+  </testcase>
+</testsuite>

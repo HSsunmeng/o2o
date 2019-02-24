@@ -16,4 +16,35 @@
             )
         </foreach>
     </insert>
+    <delete id="deleteProductImg" parameterType="long">
+        DELETE
+        FROM
+        tb_product_img
+        WHERE
+        product_id=#{productId}
+    </delete>
+    <!--<resultMap id="productImgMap" type="com.o2o.entity.ProductImg">-->
+        <!--<id column="product_img_id" property="productImgId"/>-->
+        <!--<result column="product_id" property="productId"/>-->
+        <!--<collection property="productImgId" ofType="com.o2o.entity.ProductImg" column="product_img_id">-->
+            <!--<id column="product_img_id" property="productImgId"/>-->
+            <!--<result property="imgAddr" column="img_addr"/>-->
+            <!--<result property="imgDesc" column="img_desc"/>-->
+            <!--<result property="createTime" column="create_time"/>-->
+            <!--<result property="priority" column="priority"/>-->
+                <!---->
+        <!--</collection>-->
+    <!--</resultMap>-->
+    <select id="queryProductImgList" resultType="com.o2o.entity.ProductImg">
+      SELECT
+      product_img_id,
+      img_addr,
+      img_desc,
+      create_time,
+     priority
+     FROM
+     tb_product_img
+     WHERE
+     product_id=#{productId}
+    </select>
 </mapper>

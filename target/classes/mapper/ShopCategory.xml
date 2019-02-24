@@ -14,10 +14,13 @@
         FROM
         tb_shop_category
         <where>
+        <if test="shopCategoryContent == null">
+            AND parent_id is null
+        </if>
         <if test="shopCategoryContent!=null">
             and parent_id is not null
         </if>
-            <if test="shopCategoryContent.parent!=null">
+            <if test="shopCategoryContent!= null and shopCategoryContent.parent!=null and shopCategoryContent.parent.shopCategoryId !=null">
                 and parent_id=#{shopCategoryContent.parent.shopCategoryId}
             </if>
         </where>
